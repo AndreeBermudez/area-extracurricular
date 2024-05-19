@@ -82,108 +82,130 @@ header {
 
 /************************ CONOCENOS *********************************/
 
-.conocenos{
-    background-color: #151414;
-    width: 100%;
-    height: 100vh;
+.conocenos {
+  background-color: #151414;
+  width: 100%;
+  height: 100vh;
 }
 
 .conocenos-titulo {
-    width: 90%;
-    height: 120px;
-    color: #fefefe;
-    font-size: 54px;
-    font-weight: bold;
-    margin: 0 auto;
-    text-align: center;
-    padding: 20px 0;
+  width: 90%;
+  height: 120px;
+  color: #fefefe;
+  font-size: 54px;
+  font-weight: bold;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px 0;
 }
 
-.conocenos-container{
-    width: 90%;
-    height: calc(100vh - 200px);
-    margin: 30px auto 0 auto;
-    background-color: #fefefe;
-    border-radius: 0 60px 0 0;
-    display: flex;
+.conocenos-container {
+  width: 90%;
+  height: calc(100vh - 200px);
+  margin: 30px auto 0 auto;
+  background-color: #fefefe;
+  border-radius: 0 60px 0 0;
+  display: flex;
 }
 
-.conocenos-image{
-    width: 50%;
-    height: 100%;
-    background-image: url(img-presentacion/vida.jpg);
-    background-size: cover;
-    background-position: center;
+.conocenos-image {
+  width: 50%;
+  height: 100%;
+  background-image: url(img-presentacion/vida.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
-.conocenos-descripcion{
-    width: 50%;
-    height: 100%;
-    border-radius: inherit;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+.conocenos-descripcion {
+  width: 50%;
+  height: 100%;
+  border-radius: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
-.descripcion-container{
-    width: 90%;
-    height: 30%;
-    margin: 0 auto;
-    position: relative;
-    flex-direction: column;
-    justify-content: start;
+.descripcion-container {
+  width: 90%;
+  height: 30%;
+  margin: 0 auto;
+  position: relative;
+  flex-direction: column;
+  justify-content: start;
 }
 
-.desc-container-1{
-    width: 80%;
-    height: 120px;
-    margin: 0 auto;
-    background-color: #911315;
-    border-radius:0 60px 0 0;
+.desc-container-1 {
+  width: 80%;
+  height: 120px;
+  margin: 0 auto;
+  background-color: #911315;
+  border-radius: 0 60px 0 0;
 }
 
-.desc-container-1 h3{
-    color: #fefefe;
-    font-size: 36px;
-    font-weight: bold;
-    margin: 0;
-    padding: 40px 0;
-    text-align: center;
+.desc-container-1 h3 {
+  color: #fefefe;
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0;
+  padding: 40px 0;
+  text-align: center;
 }
 
-.desc-container-2{
-    width: 217px;
-    height: 40px;
-    background-color: #000000;
-    border-radius:60px 0 0 0;
-    position: absolute;
-    right: 10px;
-    bottom: 25px;
+.desc-container-2 {
+  width: 217px;
+  height: 40px;
+  background-color: #000000;
+  border-radius: 60px 0 0 0;
+  position: absolute;
+  right: 10px;
+  bottom: 25px;
 }
 
-.desc-container-2 h4{
-    text-align: center;
-    font-size: 24px;
-    color:#fefefe;
-    padding-top: 8px;
-    font-weight: 300;
+.desc-container-2 h4 {
+  text-align: center;
+  font-size: 24px;
+  color: #fefefe;
+  padding-top: 8px;
+  font-weight: 300;
 }
 
-.descripcion-parrafo{
-    width: 90%;
-    height: 60%;
-    margin: 0 auto;
-    font-size: 25px;
-    text-align: center;
-    padding: 40px 40px 0 40px ;
+.descripcion-parrafo {
+  width: 90%;
+  height: 60%;
+  margin: 0 auto;
+  font-size: 25px;
+  text-align: center;
+  padding: 040px;
+  display: flex;
+  align-items: center;
 }
-
 
 /************************ MEDIA QUERIES *********************************/
 
 @media screen and (max-width: 1320px) {
   .navegacion {
     padding: 0 50px;
+  }
+
+  .desc-container-1 h3 {
+    font-size: 30px;
+  }
+
+  .desc-container-2 h4 {
+    font-size: 20px;
+  }
+
+  .descripcion-parrafo {
+    font-size: 20px;
+  }
+
+  .desc-container-1 {
+    height: 100px;
+  }
+  
+  .desc-container-2 {
+    height: 35px;
+    bottom: 35px;
   }
 }
 
@@ -194,6 +216,37 @@ header {
 
   .portada-titulo {
     font-size: 45px;
+  }
+
+  .conocenos-image{
+    display: none;
+  }
+
+  .conocenos-descripcion {
+    flex-grow: 1;
+  }
+
+  .conocenos-container {
+    background-image: url(img-presentacion/vida.jpg);
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
+  }
+
+  .desc-container-1 {
+    background-color: #DDDDDD;
+  }
+
+  .desc-container-1 h3 {
+    color: #000000;
+  }
+
+  .descripcion-parrafo {
+    color: #ffffff;
+    font-weight: 500;
+    line-height: 1.5;
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 40%;
   }
 }
 
@@ -251,9 +304,18 @@ header {
 }
 
 @media screen and (max-width: 768px) {
-    .portada-titulo {
-        font-size: 26px;
-        margin: 0;
-        text-align: center;
-      }
+  .portada-titulo {
+    font-size: 26px;
+    margin: 0;
+    text-align: center;
+  }
+
+  .conocenos-titulo {
+    font-size: 45px;
+    padding: 40px 0;
+  }
+
+  .descripcion-parrafo {
+    font-size: 18px;
+  }
 }
