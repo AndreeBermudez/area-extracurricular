@@ -12,7 +12,7 @@
 /************************ NAVEGACION *********************************/
 
 header {
-  background-image: url(img-nav/portada.jpg);
+  background-image: url(../img-nav/portada.jpg);
   background-size: cover;
   background-position: center;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
@@ -111,7 +111,7 @@ header {
 .conocenos-image {
   width: 50%;
   height: 100%;
-  background-image: url(img-presentacion/vida.jpg);
+  background-image: url(../img-presentacion/vida.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -216,7 +216,7 @@ header {
 }
 
 .vida-utp__c1{
-    background-image: url(img-presentacion/futbol.jpg);
+    background-image: url(../img-presentacion/futbol.jpg);
     background-size: cover;
     background-position:top;
     display: flex;
@@ -268,7 +268,7 @@ header {
 }
 
 .vida-utp__c4{
-    background-image: url(img-presentacion/estudiantes.jpg);
+    background-image: url(../img-presentacion/estudiantes.jpg);
     background-size: cover;
     background-position:center;
     display: flex;
@@ -338,7 +338,7 @@ header {
   }
 
   .conocenos-container {
-    background-image: url(img-presentacion/vida.jpg);
+    background-image: url(../img-presentacion/vida.jpg);
     background-size: cover;
     background-position: center;
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
