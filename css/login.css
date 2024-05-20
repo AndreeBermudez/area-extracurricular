@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Raleway", sans-serif;
+  }
+
+  .login-background{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background-color: #000000c0;
+    align-items: center;
+  }
+
+  .login-imagen{
+    width: 50%;
+    height: 100vh;
+    background-image: url(/img-login/image-login.png);
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.2);
+  }
+
+  .login-container-form{
+    width: 30%;
+    height: 90vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 35px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.403);
+  }
+
+  .login-container-form > div{
+    width: 85%;
+    margin: 0 auto;
+    background-color: white;
+  }
+
+  .form-logo{
+    display: flex;
+    justify-content: center;
+  }
+
+  .form-logo img{
+    max-width: 200px;
+    height: auto;
+  }
+
+  .form-titulo{
+    text-align: center;
+    font-size: 2.5vh;
+    font-weight: bold;
+  }
+
+  .form-login{
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .formulario{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .user-login{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.user-login input{
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: thin solid #c5c2c2;
+}
+
+.btn-registro{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 10px;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.btn-registro input{
+  padding: 8px 20px;
+  background-color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 10px;
+  color: #fefefe;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 1270px){
+  .form-titulo{
+    font-size:2.3vh;
+}
+
+.user-login input{
+  font-size: 0.9rem;
+}
+
+.btn-registro input,
+.btn-registro p{
+  font-size: 0.9rem;
+}
+
+}
+@media screen and (max-width: 950px){
+  
+  html,body{
+    height: 100%;
+  }
+  
+  .login-background{
+    height: 100%;
+    background-color: #ACADA7;
+    background-image: url(/img-login/login-responsive.jpg);
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.427);
+  }
+
+  .login-imagen{
+    display:none;
+  }
+
+  .login-container-form{
+    width: 50%;
+    height: 65%;
+  }
+  
+}
+@media screen and (max-width: 864px){
+  .form-titulo p{
+    font-size: 20px;
+    margin: 0 20px;
+  }
+  
+}
+@media screen and (max-width: 428px){
+  .login-container-form{
+    width: 80%;
+  }
+
+  .form-logo img{
+    width: 150px;
+    height: auto;
+  }
+
+  .login-container-form .form-logo{
+    margin-top: 20px;
+  }
+
+}

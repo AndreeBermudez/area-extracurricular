@@ -1,98 +1,40 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Area Extracurricular</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/login.css">
+    <title>Login</title>
 </head>
-
 <body>
-    <header>
-        <section class="navegacion">
-            <div class="logo">
-                <img src="img-nav/logo.png" alt="Logo">
+    <section class="login-background">
+        <div class="login-imagen"></div>
+
+        <div class="login-container-form">
+            <div class="form-logo">
+                <img src="/img-nav/logo.png" alt="logo">
             </div>
-
-            <div class="hamburger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
+            <div class="form-titulo">
+                <p>Ingresa tus datos para iniciar sesión.</p>
             </div>
-
-            <nav class="nav-bar">
-                <ul>
-                    <li><a href="" class="active">Inicio</a></li>
-                    <li><a href="">Horarios</a></li>
-                    <li><a href="">Formulario</a></li>
-                    <li><a href="">Contacto</a></li>
-                </ul>
-        </section>
-        <section class="container-titulo">
-            <h1 class="portada-titulo">Area de Oficina Extracurricular</h1>
-        </section>
-    </header>
-
-    <section class="conocenos">
-        <div class="conocenos-titulo">
-            <h2>CONÓCENOS</h2>
-        </div>
-        <div class="conocenos-container">
-            <div class="conocenos-image"></div>
-            <div class="conocenos-descripcion">
-                <div class="descripcion-container">
-                    <div class="desc-container-1">
-                        <h3>VIDA UNIVERSITARIA</h3>
+            <div class="form-login">
+                <form class="formulario">
+                    <div class="user-login">
+                      <input type="text" name="user" placeholder="Usuario del alumno" required />
                     </div>
-                    <div class="desc-container-2">
-                        <h4>Propósito</h4>
+                    <div class="user-login">
+                      <input type="password" name="password" placeholder="Contraseña" required />
                     </div>
-                </div>
-                <div class="descripcion-parrafo">
-                    <p>
-                        En UTP buscamos que nuestros alumnos puedan complementar su formación académica, 
-                        a través de nuestros talleres y actividades que permitirán explorar y desarrollar 
-                        sus habilidades tanto deportivas como culturales.
-                    </p>
-                </div>
+                    <div class="btn-registro">
+                      <a href="index.html"><input type="button" name="Inicio" value="Iniciar Sesion"/></a>
+                      <p>¿Aún no eres usuario? <a href="registro.html">Registrate</a></p>
+                    </div>
+                  </form>
             </div>
+            <div class="form-registro"></div>
         </div>
+        
     </section>
-
-    <section class="vida-utp">
-        <div class="vida-utp__titulo">
-            <h2>VIDA UTP</h2>
-        </div>
-        <div class="vida-utp__container">
-            <div class="vida-utp__c1 cont-principal">
-                <div class="vida-utp__box">
-                    <p>Conoce los clubes más destacados
-                        en utp</p>
-                </div>
-            </div>
-            <div class="vida-utp__c2 cont-principal">
-                <p>En la Universidad Tecnológica de Perú, destacamos a los deportistas más sobresalientes 
-                    en cada taller deportivo, reconociendo su dedicación y logros. Estos estudiantes ejemplares 
-                    no solo muestran habilidades excepcionales, sino también espíritu deportivo y compromiso 
-                    con la excelencia.</p>
-                <a href="">Más información</a>
-            </div>
-            <div class="vida-utp__c3 cont-principal">
-                <p>Inscríbete a los talleres deportivos de la UTP y destaca como deportista mientras desarrollas 
-                    tus habilidades y fomentas el trabajo en equipo. ¡Únete a nosotros y lleva tu rendimiento al 
-                    siguiente nivel!.</p>
-                <a href="">Inscribete</a>
-            </div>
-            <div class="vida-utp__c4 cont-principal">
-                <div class="vida-utp__box">
-                   <p>Inscribete y vive la experiencia de la vida universitaria</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <script src="script.js"></script>
 </body>
-
 </html>

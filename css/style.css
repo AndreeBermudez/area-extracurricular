@@ -12,7 +12,7 @@
 /************************ NAVEGACION *********************************/
 
 header {
-  background-image: url(img-nav/portada.jpg);
+  background-image: url(/img-nav/portada.jpg);
   background-size: cover;
   background-position: center;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
@@ -111,7 +111,7 @@ header {
 .conocenos-image {
   width: 50%;
   height: 100%;
-  background-image: url(img-presentacion/vida.jpg);
+  background-image: url(/img-presentacion/vida.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -216,7 +216,7 @@ header {
 }
 
 .vida-utp__c1{
-    background-image: url(img-presentacion/futbol.jpg);
+    background-image: url(/img-presentacion/futbol.jpg);
     background-size: cover;
     background-position:top;
     display: flex;
@@ -268,7 +268,7 @@ header {
 }
 
 .vida-utp__c4{
-    background-image: url(img-presentacion/estudiantes.jpg);
+    background-image: url(/img-presentacion/estudiantes.jpg);
     background-size: cover;
     background-position:center;
     display: flex;
@@ -338,7 +338,7 @@ header {
   }
 
   .conocenos-container {
-    background-image: url(img-presentacion/vida.jpg);
+    background-image: url(/img-presentacion/vida.jpg);
     background-size: cover;
     background-position: center;
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
@@ -430,3 +430,134 @@ header {
     font-size: 18px;
   }
 }
+
+@media screen and (max-width: 412px) {
+
+  header {
+    background-position: calc(50% - 50px) center;
+  }
+  
+  .navegacion .logo img {
+    width: 120px;
+  }
+
+  .navegacion {
+    padding: 0 20px;
+  }
+
+  .portada-titulo {
+    font-size: 35px;
+  }
+
+  .container-titulo {
+    padding: 350px 25px;
+  }
+
+  .conocenos-titulo {
+    font-size: 30px;
+    height: 100px;
+  }
+
+  .descripcion-parrafo {
+    min-height: 350px;
+  }
+
+  .desc-container-1 {
+    height: 90px;
+  }
+
+  .desc-container-1 h3 {
+    font-size: 20px;
+  }
+
+  .desc-container-2 {
+    bottom: 45px;
+    width: 150px;
+  }
+  
+  /* 
+  .conocenos-container {
+    width: 90%;
+    height: calc(100vh - 200px);
+    margin: 30px auto 0 auto;
+    background-color: #fefefe;
+    border-radius: 0 60px 0 0;
+    display: flex;
+  }
+  
+  .conocenos-image {
+    width: 50%;
+    height: 100%;
+    background-image: url(img-presentacion/vida.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .conocenos-descripcion {
+    width: 50%;
+    height: 100%;
+    border-radius: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  
+  .descripcion-container {
+    width: 90%;
+    max-width: 600px;
+    height: 30%;
+    max-height: 165px;
+    margin: 0 auto;
+    position: relative;
+    flex-direction: column;
+    justify-content: start;
+  }
+  
+  .desc-container-1 {
+    width: 80%;
+    height: 120px;
+    margin: 0 auto;
+    background-color: #911315;
+    border-radius: 0 60px 0 0;
+  }
+  
+  .desc-container-1 h3 {
+    color: #fefefe;
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0;
+    padding: 40px 0;
+    text-align: center;
+  }
+  
+  .desc-container-2 {
+    width: 217px;
+    height: 40px;
+    background-color: #000000;
+    border-radius: 60px 0 0 0;
+    position: absolute;
+    right: 10px;
+    bottom: 25px;
+  }
+  
+  .desc-container-2 h4 {
+    text-align: center;
+    font-size: 24px;
+    color: #fefefe;
+    padding-top: 8px;
+    font-weight: 300;
+  }
+  
+  .descripcion-parrafo {
+    width: 90%;
+    height: 60%;
+    margin: 0 auto;
+    font-size: 25px;
+    text-align: center;
+    padding: 040px;
+    display: flex;
+    align-items: center;
+  } */
+
+}
+
