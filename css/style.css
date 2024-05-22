@@ -182,6 +182,154 @@ header {
   align-items: center;
 }
 
+.active {
+  height: 100%;
+}
+
+/************************ FAQ *********************************/
+.FAQ {
+  background-color: #fefefe;
+  width: 100%;
+  height: auto;
+  padding: 3%;
+}
+
+.FAQ-header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../img-nav/search.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5% 3%;
+  border-radius: 30px;
+  max-height: 380px;
+  color: #fefefe;
+}
+
+.FAQ-titulo {
+  font-size: 48px;
+  letter-spacing: 1.5px;
+}
+
+.FAQ-desc {
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.search {
+  width: 60%;
+  height: 50px;
+  background-color: #fefefe;
+  margin-top: 5%;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.search input {
+  width: 80%;
+  height: 100%;
+  padding: 1% 3%;
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+.search button {
+  width: 20%;
+  min-width: 100px;
+  height: 100%;
+  background-color: #000000;
+  color: #fefefe;
+  border: none;
+  border-radius: 30px;
+}
+
+.search button:hover {
+  background-color: #595757;
+}
+
+.FAQ-acordeon {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 3%;
+}
+
+.FAQ-name {
+  flex: 0.5;
+  padding: 2% 2% 0 0;
+}
+
+.FAQ-name h1 {
+  padding: 5% 0 0 0;
+  font-size: 40px;
+  letter-spacing: 2px;
+}
+
+.FAQ-name img {
+  width: 100%;
+  max-width: 100px;
+}
+
+.FAQ-box {
+  flex: 1;
+  min-width: 320px;
+  padding: 2% 0 4% 4%;
+  border-left: 2px solid #000000;
+}
+
+.FAQ-wrapper {
+  width: 100%;
+  padding: 1.5rem;
+  border-bottom: 1px solid #000000;
+}
+
+.FAQ-title {
+  display: block;
+  position: relative;
+  width: 100%;
+  letter-spacing: 1.2;
+  font-size: 24px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.FAQ-title::after {
+  width: 10px;
+  height: 10px;
+  content: "";
+  float: right;
+  border-style: solid;
+  border-width: 2px 2px 0 0;
+  transform: rotate(135deg);
+  transition: 0.4s ease-in-out;
+}
+
+.FAQ-detail {
+  line-height: 2;
+  letter-spacing: 1px;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.3s ease-in-out;
+  font-size: 14px;
+}
+
+.FAQ-trigger {
+  display: none;
+}
+
+.FAQ-trigger:checked + .FAQ-title::after {
+  transform: rotate(-45deg);
+  transition: 0.4s ease-in-out;
+}
+
 /************************ VIDA UTP *********************************/
 .vida-utp {
   background-color: #ececec;
@@ -290,7 +438,7 @@ header {
 }
 
 /************************NOTICIAS****************************************/
-.noticias{
+.noticias {
   background-color: #911315;
   width: 100%;
   height: 70vh;
@@ -299,14 +447,14 @@ header {
   align-items: center;
 }
 
-.noticias-container{
+.noticias-container {
   width: 80%;
   height: 80%;
   background-color: #fefefe;
   display: flex;
 }
 
-.noticias-texto{
+.noticias-texto {
   width: 40%;
   height: 100%;
   padding: 40px;
@@ -317,21 +465,21 @@ header {
   gap: 20px;
 }
 
-.noticias-texto h2{
+.noticias-texto h2 {
   color: #000000;
-  font-size: 36px;
+  font-size: 30px;
   font-weight: bold;
   text-align: center;
   margin: 0;
 }
 
-.noticias-texto p{
+.noticias-texto p {
   color: #525252;
   font-size: 15px;
   text-align: center;
 }
 
-.noticias-slider{
+.noticias-slider {
   width: 60%;
   height: 100%;
   display: flex;
@@ -342,44 +490,44 @@ header {
   overflow: hidden;
 }
 
-.slider-container{
+.slider-container {
   width: 100%;
   height: auto;
   background-color: #13917c;
   animation: slide 8s infinite linear;
 }
 
-.slider-container ul{
+.slider-container ul {
   display: flex;
   padding: 0;
   width: 200%;
 }
 
-.slider-container li{
+.slider-container li {
   list-style: none;
   width: 100%;
 }
 
-.slider-container img{
+.slider-container img {
   width: 100%;
   height: 100%;
 }
 
 /************************ FOOTER *********************************/
 
-.footer-utp{
+.footer-utp {
   background-color: #000000;
   width: 100%;
   height: 30vh;
 }
 
-.footer-seccion1{
+.footer-seccion1 {
   width: 100%;
   height: 80%;
   display: flex;
 }
 
-.footer-ubicanos{
+.footer-ubicanos {
   width: 30%;
   height: 100%;
   color: #fefefe;
@@ -390,21 +538,21 @@ header {
   gap: 10px;
 }
 
-.footer-ubicanos h2{
+.footer-ubicanos h2 {
   font-size: 18px;
   font-weight: 400;
 }
 
-.footer-ubicanos p{
+.footer-ubicanos p {
   font-size: 13px;
 }
 
-.footer-email{
+.footer-email {
   width: 70%;
   height: 100%;
 }
 
-.footer-form{
+.footer-form {
   margin: 0 auto;
   width: 60%;
   height: 100%;
@@ -415,11 +563,11 @@ header {
   padding: 0 80px;
 }
 
-.footer-form p{
+.footer-form p {
   color: #fefefe;
 }
 
-.footer-form input{
+.footer-form input {
   width: 100%;
   height: 40px;
   border: none;
@@ -428,7 +576,7 @@ header {
   padding: 0 20px;
 }
 
-.footer-form button{
+.footer-form button {
   width: 20%;
   height: 30px;
   border: none;
@@ -439,7 +587,7 @@ header {
   font-weight: bold;
 }
 
-.footer-seccion2{
+.footer-seccion2 {
   width: 100%;
   height: 20%;
   background-color: #090909;
@@ -447,28 +595,28 @@ header {
   align-items: center;
 }
 
-.footer-seccion2 ul{
+.footer-seccion2 ul {
   display: flex;
 }
 
-.footer-seccion2 ul li{
+.footer-seccion2 ul li {
   margin: 0 5px;
 }
 
-.footer-copy{
+.footer-copy {
   color: #fefefebb;
   font-size: 15px;
   padding-left: 25%;
 }
 
 /************************FORMULARIO*********************************/
-.body-form {
+.formulario-registro {
   font-family: 'Libre Franklin', sans-serif;
-  margin: 0;
-  padding: 0;
   background-color: #f0f0f0;
   background-image: url('https://api-dev.utpxpedition.com/new-vi-drupal/sites/default/files/home/bg02.jpg');
   background-size: cover;
+  width: 100%;
+  height: 70vh;
 }
 
 #formulario {
@@ -486,15 +634,10 @@ header {
 
 .form-container h2 {
   color: #333;
-  margin-bottom: 15px;
 }
 
 .form-step {
   display: none;
-}
-
-.form-step h3{
-  margin-bottom: 15px;
 }
 
 .input-container {
@@ -508,7 +651,7 @@ header {
 
 .input-container input[type="text"],
 .input-container input[type="number"],
-select {
+.input-container select {
   width: 70%;
   padding: 8px;
   border: 1px solid #ccc;
@@ -534,13 +677,6 @@ select {
   display: block;
 }
 
-/* Mostrar el mensaje de enviado */
-#enviado-msg {
-  display: none;
-  color: rgb(49, 155, 0);
-  font-weight: bold;
-  margin-top: 20px;
-}
 
 .imagen-debajo {
   display: block;
@@ -551,33 +687,84 @@ select {
   height: auto;
 }
 
+.error-msg {
+  display: none;
+  color: red;
+  font-size: 0.9em;
+  margin-top: 0.5em;
+  background-color: #ffe6e6;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.enviado-msg {
+  display: none;
+  color: green;
+  font-size: 1.1em;
+  margin-top: 1em;
+  background-color: #e6ffe6;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.resumen {
+  display: none;
+  margin-top: 2em;
+  border: 1px solid #ccc;
+  padding: 1em;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.resumen h3 {
+  color: #333;
+  margin-top: 0;
+}
+
+.resumen p {
+  margin-bottom: 0.5em;
+}
+
+.resumen strong {
+  font-weight: bold;
+  color: #555;
+}
+
+.resumen span {
+  color: #777;
+}
+
+
 /***********************GALERIA*********************************/
-.galeria{
+.galeria {
   background: linear-gradient(to bottom, white, rgb(96, 90, 90));
 }
 
-.galeria-titulo{
+.galeria-titulo {
   color: #000000;
   font-size: 36px;
   font-weight: bold;
   text-align: center;
   margin: 0;
   padding: 20px 0;
-
 }
 
-.column img{
+.column img {
   width: 100%;
   margin-top: 5px;
 }
 
-.row{
+.row {
   display: flex;
   flex-wrap: wrap;
   padding: 5px;
 }
 
-.column{
+.column {
   flex: 25%;
   padding: 5px;
 }
@@ -626,6 +813,7 @@ select {
 
   .conocenos-descripcion {
     flex-grow: 1;
+    justify-content: center;
   }
 
   .conocenos-container {
@@ -649,6 +837,72 @@ select {
     line-height: 1.5;
     background-color: rgba(0, 0, 0, 0.6);
     height: 40%;
+  }
+
+  .noticias-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .noticias-texto h2 {
+    font-size: 28px;
+  }
+
+  .noticias-texto {
+    width: 80%;
+    height: 250px;
+    padding: 20px;
+  }
+
+  .noticias-slider {
+    width: 60%;
+    height: 40%;
+    min-height: 220px;
+    margin-bottom: 40px;
+    box-shadow: 0 0 10px #373737;
+    border-radius: 20px;
+  }
+
+  /*****************/
+
+  .footer-ubicanos {
+    padding: 0 20px 0 10px;
+  }
+
+  .footer-ubicanos h2 {
+    font-size: 15px;
+  }
+
+  .footer-ubicanos p {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .footer-email {
+    width: 70%;
+    height: 100%;
+  }
+
+  .footer-form {
+    padding: 0 40px;
+  }
+
+  .footer-form button {
+    width: 20%;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #000000;
+    font-weight: bold;
+  }
+
+  .footer-copy {
+    color: #fefefebb;
+    font-size: 12px;
+    padding-left: 25%;
   }
 }
 
@@ -678,7 +932,7 @@ select {
   }
 
   .nav-bar.active {
-    height: 450px;
+    height: 350px;
   }
 
   .nav-bar ul {
@@ -747,8 +1001,32 @@ select {
     margin-top: 50px;
   }
 
-  .column{
+  .column {
     flex: 50%;
+  }
+
+  .FAQ-name {
+    flex: 1;
+  }
+
+  .FAQ-name img {
+    margin-left: 30%;
+  }
+
+  .search {
+    width: 100%;
+  }
+
+  .FAQ-title {
+    font-size: 20px;
+  }
+
+  .footer-form {
+    padding: 0 20px;
+  }
+
+  .footer-copy {
+    padding-left: 20%;
   }
 }
 
@@ -767,27 +1045,107 @@ select {
   .descripcion-parrafo {
     font-size: 18px;
   }
+
+  .noticias-texto h2 {
+    font-size: 25px;
+  }
+
+  .noticias-texto {
+    width: 90%;
+    height: 250px;
+    padding: 20px;
+  }
+
+  .noticias-slider {
+    width: 70%;
+    height: 40%;
+    min-height: 220px;
+    margin-bottom: 40px;
+    box-shadow: 0 0 10px #373737;
+    border-radius: 20px;
+  }
+
+  .vida-utp {
+    height: 100%;
+    min-height: 210vh;
+  }
+
+  .footer-seccion1,
+  .footer-seccion2 {
+    flex-direction: column-reverse;
+  }
+
+  .footer-form{
+    width: 90%;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 0 50px;
+}
+
+.footer-form p {
+  width: 100%;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.footer-form input {
+    width: 60%;
+    height: 35px;
+    font-size: 15px;
+}
+
+.footer-form button{
+  font-size: 15px;
+}
+
+
+  
+  .footer-email {
+    width: 100%;
+    height: 100%;
+}
+
+  .footer-ubicanos {
+    width: 100%;
+    height: 100%;
+    color: #fefefe;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-seccion2 {
+    height: 20%;
+    min-height: 50px;
+}
+
+  .footer-copy {
+    font-size: 10px;
+    margin: 5px auto;
+    padding: 0;
+}
 }
 
 @media screen and (max-width: 600px) {
   .form-container {
-      padding: 10px;
+    padding: 10px;
   }
 
   .input-container {
-      margin-bottom: 15px;
+    margin-bottom: 15px;
   }
 
   .button-container {
     display: flex;
-      width: 70px;
-      gap: 15px;
-
+    width: 70px;
+    gap: 15px;
   }
 }
 
 @media screen and (max-width: 412px) {
-  
   header {
     background-position: calc(50% - 50px) center;
   }
@@ -830,99 +1188,23 @@ select {
     width: 150px;
   }
 
-  .column{
+  .column {
     flex: 100%;
   }
-
-  /* 
-  .conocenos-container {
-    width: 90%;
-    height: calc(100vh - 200px);
-    margin: 30px auto 0 auto;
-    background-color: #fefefe;
-    border-radius: 0 60px 0 0;
-    display: flex;
-  }
-  
-  .conocenos-image {
-    width: 50%;
-    height: 100%;
-    background-image: url(img-presentacion/vida.jpg);
-    background-size: cover;
-    background-position: center;
-  }
-  
-  .conocenos-descripcion {
-    width: 50%;
-    height: 100%;
-    border-radius: inherit;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-  }
-  
-  .descripcion-container {
-    width: 90%;
-    max-width: 600px;
-    height: 30%;
-    max-height: 165px;
-    margin: 0 auto;
-    position: relative;
-    flex-direction: column;
-    justify-content: start;
-  }
-  
-  .desc-container-1 {
-    width: 80%;
-    height: 120px;
-    margin: 0 auto;
-    background-color: #911315;
-    border-radius: 0 60px 0 0;
-  }
-  
-  .desc-container-1 h3 {
-    color: #fefefe;
-    font-size: 36px;
-    font-weight: bold;
-    margin: 0;
-    padding: 40px 0;
-    text-align: center;
-  }
-  
-  .desc-container-2 {
-    width: 217px;
-    height: 40px;
-    background-color: #000000;
-    border-radius: 60px 0 0 0;
-    position: absolute;
-    right: 10px;
-    bottom: 25px;
-  }
-  
-  .desc-container-2 h4 {
-    text-align: center;
-    font-size: 24px;
-    color: #fefefe;
-    padding-top: 8px;
-    font-weight: 300;
-  }
-  
-  .descripcion-parrafo {
-    width: 90%;
-    height: 60%;
-    margin: 0 auto;
-    font-size: 25px;
-    text-align: center;
-    padding: 040px;
-    display: flex;
-    align-items: center;
-  } */
 }
 
 @keyframes slide {
-  0% {margin-left: 0%;}
-  45% {margin-left: 0%;}
+  0% {
+    margin-left: 0%;
+  }
+  45% {
+    margin-left: 0%;
+  }
 
-  50% {margin-left: -200%;}
-  95% {margin-left: -200%;}
+  50% {
+    margin-left: -200%;
+  }
+  95% {
+    margin-left: -200%;
+  }
 }

@@ -19,22 +19,22 @@
                 <p>Ingresa tus datos para iniciar sesión.</p>
             </div>
             <div class="form-login">
-                <form class="formulario">
+                <form class="formulario" id="myForm">
                     <div class="user-login">
-                      <input type="text" name="user" placeholder="Usuario del alumno" required />
+                      <input type="text" name="user" id="usuario" placeholder="Usuario del alumno" required />
                     </div>
                     <div class="user-login">
-                      <input type="password" name="password" placeholder="Contraseña" required />
+                      <input type="password" name="password" id="contrasenia" placeholder="Contraseña" required />
                     </div>
                     <div class="btn-registro">
-                      <a href="principal.html"><input type="button" name="Inicio" value="Iniciar Sesion"/></a>
+                      <a href="principal.html"><input type="submit" name="Inicio" value="Iniciar Sesion"/></a>
                       <p>¿Aún no eres usuario? <a href="registro.html">Registrate</a></p>
                     </div>
                   </form>
             </div>
             <div class="form-registro"></div>
         </div>
-        
     </section>
+    <script src="./js/validarLogin.js"></script>
 </body>
 </html>
