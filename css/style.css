@@ -12,12 +12,17 @@
 /************************ NAVEGACION *********************************/
 
 header {
-  background-image: url(../img-nav/portada.jpg);
+  background-image: url(../img-nav/portada.webp);
   background-size: cover;
   background-position: center;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 100vh;
+}
+
+.header-formulario{
+  background-image: url(../img-nav/CHIMBOTE.webp);
+  background-position: center 100%;
 }
 
 .navegacion {
@@ -83,107 +88,108 @@ header {
 /************************ CONOCENOS *********************************/
 
 .conocenos {
-  background-color: #151414;
+  background-color: #eeeeee;
   width: 100%;
-  height: 100vh;
-}
-
-.conocenos-titulo {
-  width: 90%;
-  height: 120px;
-  color: #fefefe;
-  font-size: 54px;
-  font-weight: bold;
-  margin: 0 auto;
-  text-align: center;
-  padding: 20px 0;
-}
-
-.conocenos-container {
-  width: 90%;
-  height: calc(100vh - 200px);
-  margin: 30px auto 0 auto;
-  background-color: #fefefe;
-  border-radius: 0 60px 0 0;
+  min-height: 100vh;
   display: flex;
 }
 
-.conocenos-image {
-  width: 50%;
-  height: 100%;
-  background-image: url(../img-presentacion/vida.jpg);
-  background-size: cover;
-  background-position: center;
+.conocenos__imagen {
+  width: 30%;
+  min-height: 100vh;
+  min-width: 400px;
+  /* background-color: blue; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.conocenos-descripcion {
-  width: 50%;
+.conocenos__imagen img {
+  width: 100%;
   height: 100%;
-  border-radius: inherit;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.conocenos__contenedor {
+  width: 70%;
+  min-height: 100vh;
+  /* background-color: #f50c0c; */
+}
+
+.conocenos__texto {
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+  padding: 30px 0 30px 40px;
+  /* background-color: aqua; */
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
 
-.descripcion-container {
-  width: 90%;
-  max-width: 600px;
-  height: 30%;
-  max-height: 165px;
-  margin: 0 auto;
-  position: relative;
-  flex-direction: column;
-  justify-content: start;
-}
-
-.desc-container-1 {
-  width: 80%;
-  height: 120px;
-  margin: 0 auto;
-  background-color: #911315;
-  border-radius: 0 60px 0 0;
-}
-
-.desc-container-1 h3 {
+.conocenos__titulo {
+  background-color: #f11039;
+  width: min-content;
+  padding: 10px 30px;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  border-radius: 0 30px 0 80px;
   color: #fefefe;
-  font-size: 36px;
-  font-weight: bold;
-  margin: 0;
-  padding: 40px 0;
-  text-align: center;
 }
 
-.desc-container-2 {
-  width: 217px;
-  height: 40px;
-  background-color: #000000;
-  border-radius: 60px 0 0 0;
-  position: absolute;
-  right: 10px;
-  bottom: 25px;
-}
-
-.desc-container-2 h4 {
-  text-align: center;
-  font-size: 24px;
-  color: #fefefe;
-  padding-top: 8px;
-  font-weight: 300;
-}
-
-.descripcion-parrafo {
+.conocenos__descripcion {
+  background-color: rgba(255, 255, 255, 0.6);
   width: 90%;
-  height: 60%;
-  margin: 0 auto;
-  font-size: 25px;
-  text-align: center;
-  padding: 040px;
+  padding: 20px 10px;
+  border-radius: 20px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 20px;
+}
+
+.conocenos__descripcion p{
+  font-size: 1rem;
+  color: #2a2a2a;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+.conocenos__responsive{
+  display: none;
+  width: 50%;
+}
+
+.conocenos__responsive img{
+  object-fit: cover;
+  width: 100%;
+}
+
+.conocenos_myv{
   display: flex;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: space-evenly;
+  padding: 30px 0 30px 40px;
+}
+
+.mision{
+  flex-basis: 40%;
+}
+
+.vision{
+  flex-basis: 40%;
+}
+
+.svg-myv{
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 
-.active {
-  height: 100%;
+.svg-myv img{
+  width: 50%;
+  aspect-ratio: 1/1;
 }
 
 /************************ FAQ *********************************/
@@ -196,7 +202,7 @@ header {
 
 .FAQ-header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(../img-nav/search.jpg);
+    url(../img-nav/search.webp);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -334,37 +340,41 @@ header {
 .vida-utp {
   background-color: #ececec;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  padding: 20px 0;
 }
 
 .vida-utp__titulo {
   width: 80%;
-  height: 120px;
+  height: auto;
   color: #000000;
-  font-size: 54px;
+  font-size: clamp(2.5rem, 4vw, 3.8rem);
   font-weight: bold;
-  margin: 0 auto;
+  margin: 10px auto;
   text-align: center;
-  padding: 20px 0;
 }
 
 .vida-utp__container {
   width: 80%;
-  height: calc(100vh - 180px);
-  margin: 20px auto 0 auto;
-  background-color: #fefefe;
+  min-height: calc(100vh - 180px);
+  margin: 0 auto 0 auto;
+  background-color: transparent;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.vida-utp-card{
+  display: flex; 
+  background-color: #fefefe;
   flex-grow: 1;
 }
 
 .cont-principal {
   flex-basis: 50%;
-  height: 50%;
 }
 
-.vida-utp__c1 {
-  background-image: url(../img-presentacion/futbol.jpg);
+.vida-utp__c1{
+  background-image: url(../img-presentacion/futbol.webp);
   background-size: cover;
   background-position: top;
   display: flex;
@@ -372,7 +382,21 @@ header {
   align-items: end;
 }
 
-.vida-utp__c2 {
+.vida-utp__box{
+  width: 60%;
+  min-height: 80px;
+  background-color: rgba(0, 0, 0, 0.72);
+}
+
+.vida-utp__box p {
+  color: #fefefe;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px 0;
+  text-transform: uppercase;
+}
+
+.vida-utp__c2{
   padding: 0 40px;
   display: flex;
   flex-direction: column;
@@ -386,11 +410,13 @@ header {
   line-height: 1.5;
 }
 
-.vida-utp__c2 a {
-  background-color: #911315;
-  border-radius: 50px;
-  color: #fefefe;
-  padding: 15px;
+.vida-utp__c4{
+  background-image: url(../img-presentacion/estudiantes.webp);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: end;
 }
 
 .vida-utp__c3 {
@@ -414,105 +440,92 @@ header {
   padding: 15px;
 }
 
-.vida-utp__c4 {
-  background-image: url(../img-presentacion/estudiantes.jpg);
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: end;
-}
-
-.vida-utp__box {
-  width: 60%;
-  height: 80px;
-  background-color: rgba(0, 0, 0, 0.72);
-}
-
-.vida-utp__box p {
-  color: #fefefe;
-  font-weight: bold;
-  text-align: center;
-  padding: 20px 0;
-  text-transform: uppercase;
-}
-
 /************************NOTICIAS****************************************/
-.noticias {
-  background-color: #911315;
-  width: 100%;
-  height: 70vh;
+.noticias{
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.noticias-container {
-  width: 80%;
-  height: 80%;
-  background-color: #fefefe;
-  display: flex;
-}
-
-.noticias-texto {
-  width: 40%;
-  height: 100%;
-  padding: 40px;
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
+  padding: 40px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.noticias-texto h2 {
-  color: #000000;
-  font-size: 30px;
-  font-weight: bold;
+.noticias-header{
   text-align: center;
-  margin: 0;
+  font-size: 1.4rem;
 }
 
-.noticias-texto p {
-  color: #525252;
-  font-size: 15px;
-  text-align: center;
-}
-
-.noticias-slider {
-  width: 60%;
-  height: 100%;
+.noticias-container{
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-  box-shadow: 0 0 10px #a8a8a8;
-  overflow: hidden;
+  margin: 20px 0;
+  flex-wrap: wrap;
 }
 
-.slider-container {
+.noticias-box{
+  width: 350px;
+  background-color: #fff;
+  border: 1px solid #cfcfcf;
+  margin: 20px;
+}
+
+.noticias-img{
   width: 100%;
   height: auto;
-  background-color: #13917c;
-  animation: slide 8s infinite linear;
 }
 
-.slider-container ul {
-  display: flex;
-  padding: 0;
-  width: 200%;
-}
-
-.slider-container li {
-  list-style: none;
-  width: 100%;
-}
-
-.slider-container img {
+.noticias-img img{
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
+.noticias-texto{
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.noticias-texto span{
+  color: #f33c3c;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.noticias-texto .n-titulo{
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #272727;
+}
+
+.noticias-texto .n-titulo:hover{
+  color:  #f33c3c;
+  transition: all ease 0.3s;
+}
+
+.noticias-texto p{
+  color:  #9b9b9b;
+  font-size: 0.9rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 20px 0px;
+}
+
+.noticias-texto a{
+  color: #0f0f0f;
+  font-weight: 500;
+}
+
+.noticias-texto a:hover{
+  color:  #f33c3c;
+  transition: all ease 0.3s;
+}
 /************************ FOOTER *********************************/
 
 .footer-utp {
@@ -612,9 +625,6 @@ header {
 /************************FORMULARIO*********************************/
 .formulario-registro {
   font-family: 'Libre Franklin', sans-serif;
-  background-color: #f0f0f0;
-  background-image: url('https://api-dev.utpxpedition.com/new-vi-drupal/sites/default/files/home/bg02.jpg');
-  background-size: cover;
   width: 100%;
   height: 70vh;
 }
@@ -640,8 +650,15 @@ header {
   display: none;
 }
 
+.form-step h3{
+  margin: 15px 0;
+}
+
 .input-container {
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .input-container label {
@@ -723,10 +740,11 @@ header {
 .resumen h3 {
   color: #333;
   margin-top: 0;
+  margin-bottom: 15px;
 }
 
 .resumen p {
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
 }
 
 .resumen strong {
@@ -775,28 +793,8 @@ header {
   .navegacion {
     padding: 0 50px;
   }
-
-  .desc-container-1 h3 {
-    font-size: 30px;
-  }
-
-  .desc-container-2 h4 {
-    font-size: 20px;
-  }
-
-  .descripcion-parrafo {
-    font-size: 20px;
-  }
-
-  .desc-container-1 {
-    height: 100px;
-  }
-
-  .desc-container-2 {
-    height: 35px;
-    bottom: 35px;
-  }
 }
+
 
 @media screen and (max-width: 1100px) {
   .navegacion {
@@ -805,63 +803,6 @@ header {
 
   .portada-titulo {
     font-size: 45px;
-  }
-
-  .conocenos-image {
-    display: none;
-  }
-
-  .conocenos-descripcion {
-    flex-grow: 1;
-    justify-content: center;
-  }
-
-  .conocenos-container {
-    background-image: url(../img-presentacion/vida.jpg);
-    background-size: cover;
-    background-position: center;
-    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
-  }
-
-  .desc-container-1 {
-    background-color: #dddddd;
-  }
-
-  .desc-container-1 h3 {
-    color: #000000;
-  }
-
-  .descripcion-parrafo {
-    color: #ffffff;
-    font-weight: 500;
-    line-height: 1.5;
-    background-color: rgba(0, 0, 0, 0.6);
-    height: 40%;
-  }
-
-  .noticias-container {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .noticias-texto h2 {
-    font-size: 28px;
-  }
-
-  .noticias-texto {
-    width: 80%;
-    height: 250px;
-    padding: 20px;
-  }
-
-  .noticias-slider {
-    width: 60%;
-    height: 40%;
-    min-height: 220px;
-    margin-bottom: 40px;
-    box-shadow: 0 0 10px #373737;
-    border-radius: 20px;
   }
 
   /*****************/
@@ -903,6 +844,96 @@ header {
     color: #fefefebb;
     font-size: 12px;
     padding-left: 25%;
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+  .conocenos__imagen {
+    display: none;
+  }
+
+  .conocenos__contenedor {
+    width: 100%;
+  }
+
+  .conocenos__texto {
+    padding: 30px 0 30px 20px;
+  }
+
+  .conocenos__titulo {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+  }
+
+  .conocenos__descripcion {
+    padding: 20px 5px;
+  }
+  
+  .conocenos__responsive{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .conocenos__responsive img{
+    object-fit: cover;
+    object-position: center 85%;
+    width: 50%;
+    border-radius: 100%;
+    min-width: 150px;
+    aspect-ratio: 1/1;
+  }
+
+  .conocenos_myv{
+    flex-direction: column;
+  }
+
+  .mision{
+    margin-bottom: 20px;
+  }
+
+  .vision{
+    margin-top: 20px;
+  }
+
+  .svg-myv{
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    background-color: #a4a4a4;
+    width: 30%;
+    min-width: 150px;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+
+  .svg-myv img{
+    width: 80%;
+    object-fit: cover;
+    
+  }
+
+  .vida-utp-card{
+    display: flex; 
+    flex-direction: column;
+    flex-grow: 1;
+    margin-bottom: 50px;
+  }
+
+  .vida-utp__c1, .vida-utp__c4 {
+    min-height: 250px; 
+  }
+
+  .vida-utp__c2, .vida-utp__c3 {
+    padding: 40px 20px;
+  }
+  
+  .vida-utp__c3 {
+    order: 2;
+  }
+
+  .vida-utp__c4 {
+    order: 1; 
   }
 }
 
@@ -958,49 +989,6 @@ header {
     margin: 0;
   }
 
-  .vida-utp__box p {
-    font-size: 13px;
-  }
-
-  .vida-utp {
-    height: 100%;
-    min-height: 200vh;
-    padding-bottom: 50px;
-  }
-
-  .vida-utp__container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    background-color: #ececec;
-    min-height: 100vh;
-  }
-
-  .vida-utp__container div:nth-child(1) {
-    order: 1;
-    height: 400px;
-  }
-  .vida-utp__box {
-    max-height: 80px;
-    margin-top: 300px;
-  }
-  .vida-utp__container div:nth-child(2) {
-    order: 2;
-    background-color: white;
-    height: 60%;
-    padding: 50px 0;
-  }
-  .vida-utp__container div:nth-child(3) {
-    order: 4;
-    background-color: white;
-    height: 60%;
-    padding: 40px 0;
-  }
-  .vida-utp__container div:nth-child(4) {
-    order: 3;
-    margin-top: 50px;
-  }
-
   .column {
     flex: 50%;
   }
@@ -1037,39 +1025,6 @@ header {
     text-align: center;
   }
 
-  .conocenos-titulo {
-    font-size: 45px;
-    padding: 40px 0;
-  }
-
-  .descripcion-parrafo {
-    font-size: 18px;
-  }
-
-  .noticias-texto h2 {
-    font-size: 25px;
-  }
-
-  .noticias-texto {
-    width: 90%;
-    height: 250px;
-    padding: 20px;
-  }
-
-  .noticias-slider {
-    width: 70%;
-    height: 40%;
-    min-height: 220px;
-    margin-bottom: 40px;
-    box-shadow: 0 0 10px #373737;
-    border-radius: 20px;
-  }
-
-  .vida-utp {
-    height: 100%;
-    min-height: 210vh;
-  }
-
   .footer-seccion1,
   .footer-seccion2 {
     flex-direction: column-reverse;
@@ -1100,8 +1055,6 @@ header {
   font-size: 15px;
 }
 
-
-  
   .footer-email {
     width: 100%;
     height: 100%;
@@ -1162,49 +1115,8 @@ header {
     font-size: 35px;
   }
 
-  .container-titulo {
-    padding: 350px 25px;
-  }
-
-  .conocenos-titulo {
-    font-size: 30px;
-    height: 100px;
-  }
-
-  .descripcion-parrafo {
-    min-height: 350px;
-  }
-
-  .desc-container-1 {
-    height: 90px;
-  }
-
-  .desc-container-1 h3 {
-    font-size: 20px;
-  }
-
-  .desc-container-2 {
-    bottom: 45px;
-    width: 150px;
-  }
-
   .column {
     flex: 100%;
   }
 }
 
-@keyframes slide {
-  0% {
-    margin-left: 0%;
-  }
-  45% {
-    margin-left: 0%;
-  }
-
-  50% {
-    margin-left: -200%;
-  }
-  95% {
-    margin-left: -200%;
-  }
-}
