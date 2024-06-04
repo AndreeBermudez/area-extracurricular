@@ -111,6 +111,11 @@
     margin-bottom: 10px;
 }
 
+.error-msj{
+    margin-top: 10px;
+    color: red;
+}
+
 /**/
 @media screen and (max-width: 1270px) {
     .form-titulo {
