@@ -711,7 +711,6 @@ header {
 }
 
 .error-msg {
-  display: none;
   color: red;
   font-size: 0.9em;
   margin-top: 0.5em;
@@ -719,22 +718,21 @@ header {
   padding: 0.5em 1em;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: none; /* Esto debe estar aquí */
 }
 
 .enviado-msg {
-  display: none;
+  display: block;
   color: green;
   font-size: 1.1em;
-  margin-top: 1em;
   background-color: #e6ffe6;
   padding: 0.5em 1em;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-
 .resumen {
-  display: none;
+  display: block;
   margin-top: 2em;
   border: 1px solid #ccc;
   padding: 1em;
