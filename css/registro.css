@@ -112,7 +112,9 @@
 }
 
 .error-msj{
-    margin-top: 10px;
+    margin: 10px 0;
+    font-weight: bold;
+    font-size: 0.8rem;
     color: red;
 }
 

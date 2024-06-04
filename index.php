@@ -42,6 +42,11 @@
                       echo '<span class="error-msj">' . $_SESSION['error'] . '</span>';
                       unset($_SESSION['error']);
                   }
+
+                  if (isset($_SESSION['mensaje'])) {
+                    echo '<span class="registrado-msj">' . $_SESSION['mensaje'] . '</span>';
+                    unset($_SESSION['mensaje']);
+                }
               ?>
             </div>
             <div class="btn-registro">

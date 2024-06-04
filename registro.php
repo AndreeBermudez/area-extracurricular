@@ -1,4 +1,5 @@
 <?php
+session_start();
 $error = '';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nombre = $_POST['nombre'];
@@ -16,6 +17,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else if ($password !== $confirmar_password) {
         $error = 'Las contraseñas no coinciden';
     } else {
+        if (!isset($_SESSION['usuarios'])) {
+            $_SESSION['usuarios'] = [];
+        }
+        $_SESSION['usuarios'][] = ['usuario' => $usuario, 'password' => $password];
+        $_SESSION['mensaje'] = 'Registrado con éxito';
         header('Location: index.php');
         exit;
     }

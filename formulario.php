@@ -22,115 +22,69 @@
 
         <nav class="nav-bar">
           <ul>
-            <li><a href="principal.html" class="active">Inicio</a></li>
-            <li><a href="formulario.html">Formulario</a></li>
+            <li><a href="principal.php" class="active">Inicio</a></li>
+            <li><a href="formulario.php">Formulario</a></li>
             <li><a href="index.php">Salir</a></li>
           </ul>
         </nav>
       </section>
       <section class="formulario-registro">
         <section id="formulario">
-          <div class="form-container">
-            <h2>Registro para los talleres</h2>
-            <form
-              id="form"
-              action="#"
-              method="post"
-              onsubmit="event.preventDefault(); validarFormulario();"
-            >
-              <div class="form-step" id="step1">
-                <h3>Paso 1: Ingresa tu código</h3>
-                <div class="input-container">
-                  <label for="Codigo">Código:</label>
-                  <input
-                    type="text"
-                    id="Codigo"
-                    title="Código de Estudiante"
-                    name="Codigo"
-                    placeholder="Ingresa tu código"
-                    required
-                  />
-                  <span class="error-msg" id="errorCodigo"></span>
-                </div>
-                <div class="button-container">
-                  <button type="button" style="display: none">Regresar</button>
-                  <button type="button" onclick="nextStep(1)">Siguiente</button>
-                </div>
-              </div>
-              <div class="form-step" id="step2">
-                <h3>Paso 2: Ingresa tus datos personales</h3>
-                <div class="input-container">
-                  <label for="nombre">Nombre:</label>
-                  <input
-                    type="text"
-                    id="nombre"
-                    name="Nombre"
-                    placeholder="Escribe tu nombre"
-                    required
-                  />
-                  <span class="error-msg" id="errorNombre"></span>
-                </div>
-                <div class="input-container">
-                  <label for="apellido">Apellido:</label>
-                  <input
-                    type="text"
-                    id="apellido"
-                    name="Apellido"
-                    placeholder="Escribe tu apellido"
-                    required
-                  />
-                  <span class="error-msg" id="errorApellido"></span>
-                </div>
-                <div class="input-container">
-                  <label for="numero">Número:</label>
-                  <input
-                    type="text"
-                    name="numero"
-                    id="numero"
-                    placeholder="Ejemplo: 999999999"
-                    required
-                  />
-                  <span class="error-msg" id="errorNumero"></span>
-                </div>
-                <div class="button-container">
-                  <button type="button" onclick="previousStep(2)">
-                    Regresar
-                  </button>
-                  <button type="button" onclick="nextStep(2)">Siguiente</button>
-                </div>
-              </div>
-              <div class="form-step" id="step3">
-                <h3>Paso 3: Selecciona un taller</h3>
-                <div class="input-container">
-                  <label for="taller">Seleccione un taller:</label>
-                  <select id="taller" name="talleres" required>
-                    <option value="taller1">Taller Cultural</option>
-                    <option value="taller2">Taller Deportivo</option>
-                  </select>
-                </div>
-                <div class="button-container">
-                  <button type="button" onclick="previousStep(3)">
-                    Regresar
-                  </button>
-                  <button type="submit">Enviar</button>
-                </div>
-              </div>
-            </form>
-            <p id="enviado-msg" class="enviado-msg" style="display: none">
-              <b>¡Formulario enviado correctamente!</b>
-            </p>
-            <div id="resumen" class="resumen" style="display: none">
-              <h3>Resumen de la Información</h3>
-              <p><strong>Código:</strong> <span id="resumenCodigo"></span></p>
-              <p><strong>Nombre:</strong> <span id="resumenNombre"></span></p>
-              <p><strong>Correo:</strong> <span id="resumenCorreo"></span></p>
-              <p><strong>Número:</strong> <span id="resumenNumero"></span></p>
-              <p><strong>Taller:</strong> <span id="resumenTaller"></span></p>
-              <p>Se enviará más información al correo.</p>
+            <div class="form-container">
+                <h2>Registro para los talleres</h2>
+                <form id="form" action="procesar.php" method="post">
+                    <div class="form-step" id="step1"> <br>
+                        <h3>Paso 1: Ingresa tu código</h3>
+                        <div class="input-container">
+                            <label for="Codigo">Código:</label>
+                            <input type="text" id="Codigo" title="Código de Estudiante" name="Codigo" placeholder="Ingresa tu código" required>
+                            <span class="error-msg"><?php echo $errorCodigo ?? ''; ?></span>
+                        </div>
+                        <div class="button-container">
+                            <button type="button" style="display: none;">Regresar</button>
+                            <button type="button" onclick="mostrarPaso(2)">Siguiente</button>
+                        </div>
+                    </div>
+                    <div class="form-step" id="step2" style="display: none;">
+                        <h3>Paso 2: Ingresa tus datos personales</h3> <br>
+                        <div class="input-container">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nombre" name="Nombre" placeholder="Escribe tu nombre" required>
+                            <span class="error-msg"><?php echo $errorNombre ?? ''; ?></span>
+                        </div>
+                        <div class="input-container">
+                            <label for="apellido">Apellido:</label>
+                            <input type="text" id="apellido" name="Apellido" placeholder="Escribe tu apellido" required>
+                            <span class="error-msg"><?php echo $errorApellido ?? ''; ?></span>
+                        </div>
+                        <div class="input-container">
+                            <label for="numero">Número:</label>
+                            <input type="text" name="numero" id="numero" placeholder="Ejemplo: 999999999" required>
+                            <span class="error-msg"><?php echo $errorNumero ?? ''; ?></span>
+                        </div>
+                        <div class="button-container">
+                            <button type="button" onclick="mostrarPaso(1)">Regresar</button>
+                            <button type="button" onclick="mostrarPaso(3)">Siguiente</button>
+                        </div>
+                    </div>
+                    <div class="form-step" id="step3" style="display: none;">
+                        <h3>Paso 3: Selecciona un taller</h3> <br>
+                        <div class="input-container">
+                            <label for="taller">Seleccione un taller:</label>
+                            <select id="taller" name="talleres" required>
+                                <option value="taller1">Taller Cultural</option>
+                                <option value="taller2">Taller Deportivo</option>
+                            </select>
+                        </div>
+                        <div class="button-container">
+                            <button type="button" onclick="mostrarPaso(2)">Regresar</button>
+                            <button type="submit">Enviar</button>
+                        </div>
+                    </div>
+                </form>
             </div>
-          </div>
         </section>
-      </section>
+    </section>
     </header>
 
     <section class="galeria">
@@ -240,4 +194,3 @@
     <script src="./js/script.js"></script>
     <script src="./js/form.js"></script>
   </body>
-</html>

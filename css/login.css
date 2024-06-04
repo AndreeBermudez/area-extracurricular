@@ -88,9 +88,16 @@
 
 .user-login .error-msj{
   margin-top: 10px;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: bold;
   color: red;
+}
+
+.user-login .registrado-msj{
+  margin-top: 10px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: rgb(10, 0, 150);
 }
 
 .user-login input{

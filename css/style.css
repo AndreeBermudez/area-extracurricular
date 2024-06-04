@@ -85,6 +85,12 @@ header {
   margin: 0;
 }
 
+.fecha{
+  color: #fefefe;
+  font-size: 1.5rem;
+  margin-left: 15%;
+}
+
 /************************ CONOCENOS *********************************/
 
 .conocenos {
