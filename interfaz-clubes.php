@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <header>
+  <header class="header-clubes">
     <?php include 'header-clubes.php'; ?>
   </header>
 

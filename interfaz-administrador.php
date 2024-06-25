@@ -1,3 +1,9 @@
+<?php
+// if(!isset($_SESSION['esAdmin']) || !$_SESSION['esAdmin']) {
+//     header('Location: interfaz-login.php');
+//     exit();
+// }
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -10,21 +16,21 @@
 </head>
 
 <body>
-    <header>
-        <?php include 'header-principal.php'; ?>
+    <header class="header-administrador">
+        <?php include 'header-administrador.php'; ?>
     </header>
 
     <section class="container-usuarios">
         <div class="container-usuarios__titulo">
-            <h2>Usuarios</h2>
+            <h2>Usuarios Registrados</h2>
         </div>
         <div class="container-usuarios__filtro">
             <input type="text" placeholder="Buscar usuario">
             <button>Buscar</button>
         </div>
         <div class="container-usuarios__tabla">
-            <table>
-                <thead>
+            <table class="tabla-usuarios">
+                <thead class="tabla-usuarios__cabecera">
                     <tr>
                         <th>Nombre</th>
                         <th>Usuario</th>
@@ -32,12 +38,12 @@
                         <th>Acciones</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody class="tabla-usuarios__cuerpo">
                     <?php
                     $directorio = opendir('user/');
                     $usuarios = [];
                     while (($archivo=readdir($directorio)) !== false){
-                        if($archivo != '.' && $archivo != '..'){
+                        if($archivo != '.' && $archivo != '..' && $archivo != 'admin.txt'){
                             $rutaArchivo='user/'.$archivo;
                             $contenidoArchivo = file_get_contents($rutaArchivo);
                             $usuario=json_decode($contenidoArchivo,true);

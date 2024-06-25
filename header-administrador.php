@@ -12,16 +12,15 @@
 
             <nav class="nav-bar">
                 <ul>
-                    <li><a href="interfaz-principal.php" class="active">Inicio</a></li>
+                    <li><a href="interfaz-principal.php">Inicio</a></li>
                     <li><a href="interfaz-clubes.php">Clubes</a></li>
                     <li><a href="interfaz-formulario.php">Formulario</a></li>
                     <?php if (isset($_SESSION['esAdmin']) && $_SESSION['esAdmin']): ?>
-                    <li><a href="interfaz-administrador.php">Administración</a></li>
+                    <li><a href="interfaz-administrador.php" class="active">Administración</a></li>
                     <?php endif; ?> 
                     <li><a href="interfaz-login.php">Salir</a></li>
                 </ul>
         </section>
         <section class="container-titulo">
-            <h1 class="portada-titulo">Area de Oficina Extracurricular</h1>
-            <span class="fecha">Hoy es: <?php echo date("d/m/Y"); ?></span>        
+            <h1 class="portada-titulo">PANEL ADMINISTRATIVO</h1>       
           </section>

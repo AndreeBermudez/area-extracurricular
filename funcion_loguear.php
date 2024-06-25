@@ -13,11 +13,12 @@
         $datosUsuario= json_decode($datosUsuarioJson,true);
         if(password_verify($password,$datosUsuario['passwordHash'])){
             $usuarioEncontrado = true;
-            $_SESSION['usuario'] = $usuario;
         }
     }
 
     if($usuarioEncontrado) {
+        $_SESSION['usuario'] = $usuario;
+        $_SESSION['esAdmin']=$datosUsuario['esAdmin'] ?? false;
         header('Location: interfaz-principal.php');
         exit();
     } else {
