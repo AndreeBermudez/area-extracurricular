@@ -34,7 +34,27 @@ function manejarBusqueda() {
     });
 }
 
+// Filtrar usuarios
+function filtrarUsuarios() {
+    const entradaBusqueda = document.querySelector('#busquedaUsuario');
+    entradaBusqueda.addEventListener('input', function() {
+        const valorBusqueda = this.value.toLowerCase();
+        const filasUsuario = document.querySelectorAll('.filaUsuario');
+        filasUsuario.forEach(function(fila) {
+            // Asumiendo que el nombre de usuario está en la primera celda
+            const usuario = fila.cells[0].textContent.toLowerCase();
+            if (usuario.includes(valorBusqueda)) {
+                fila.style.display = '';
+            } else {
+                fila.style.display = 'none';
+            }
+        });
+    });
+}
 
-manejarMenuDesplegable();
-manejarDespliegueFAQ();
-manejarBusqueda();
+document.addEventListener('DOMContentLoaded', function() {
+    manejarMenuDesplegable();
+    manejarDespliegueFAQ();
+    manejarBusqueda();
+    filtrarUsuarios();
+});

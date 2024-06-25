@@ -25,8 +25,7 @@
             <h2>Usuarios Registrados</h2>
         </div>
         <div class="container-usuarios__filtro">
-            <input type="text" placeholder="Buscar usuario">
-            <button>Buscar</button>
+            <input type="text" id="busquedaUsuario" placeholder="Buscar usuario">
         </div>
         <div class="container-usuarios__tabla">
             <table class="tabla-usuarios">
@@ -53,7 +52,7 @@
                     closedir($directorio);
 
                     foreach ($usuarios as $usuario) {
-                        echo '<tr>';
+                        echo '<tr class="filaUsuario">';
                         echo '<td>' . $usuario['nombre'] . '</td>';
                         echo '<td>' . $usuario['usuario'] . '</td>';
                         echo '<td>' . $usuario['email'] . '</td>';
