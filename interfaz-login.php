@@ -24,7 +24,7 @@
             class="formulario"
             id="myForm"
             method="POST"
-            action="validarLogin.php"
+            action="funcion_loguear.php"
           >
             <div class="user-login">
               <input
@@ -52,7 +52,7 @@
             <div class="btn-registro">
               <input type="submit" name="Inicio" value="Iniciar Sesion" />
               <p>
-                ¿Aún no eres usuario? <a href="registro.php">Registrate</a>
+                ¿Aún no eres usuario? <a href="interfaz-registro.php">Registrate</a>
               </p>
             </div>
           </form>

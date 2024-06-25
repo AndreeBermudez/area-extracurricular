@@ -1,0 +1,1 @@
+{"nombre":"Pedro","usuario":"Pedro54","email":"u22102654@utp.edu.pe","passwordHash":"$2y$10$.9eyDquLrVEtVjpjL0bKie.CPK9ulu3FNAzX.mdj0BWPb8O9doPGm"}

@@ -11,13 +11,12 @@
 
             <nav class="nav-bar">
                 <ul>
-                    <li><a href="interfaz-principal.php" class="active">Inicio</a></li>
-                    <li><a href="interfaz-clubes.php">Clubes</a></li>
+                    <li><a href="interfaz-principal.php">Inicio</a></li>
+                    <li><a href="interfaz-clubes.php" class="active">Clubes</a></li>
                     <li><a href="interfaz-formulario.php">Formulario</a></li>
                     <li><a href="interfaz-login.php">Salir</a></li>
                 </ul>
         </section>
         <section class="container-titulo">
-            <h1 class="portada-titulo">Area de Oficina Extracurricular</h1>
-            <span class="fecha">Hoy es: <?php echo date("d/m/Y"); ?></span>        
+            <h1 class="portada-titulo">Talleres UTP</h1>     
           </section>

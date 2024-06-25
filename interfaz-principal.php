@@ -146,7 +146,7 @@
                 trabajo en equipo. ¡Únete a nosotros y lleva tu rendimiento al
                 siguiente nivel!.
               </p>
-              <a href="formulario.php">Inscribete</a>
+              <a href="interfaz-formulario.php">Inscribete</a>
             </div>
             <div class="vida-utp__c4 cont-principal">
               <div class="vida-utp__box">

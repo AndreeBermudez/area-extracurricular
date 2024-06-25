@@ -11,9 +11,10 @@
 
       <nav class="nav-bar">
         <ul>
-          <li><a href="principal.php" class="active">Inicio</a></li>
-          <li><a href="formulario.php">Formulario</a></li>
-          <li><a href="index.php">Salir</a></li>
+          <li><a href="interfaz-principal.php">Inicio</a></li>
+          <li><a href="interfaz-clubes.php">Clubes</a></li>
+          <li><a href="interfaz-formulario.php" class="active">Formulario</a></li>
+          <li><a href="interfaz-login.php">Salir</a></li>
         </ul>
       </nav>
     </section>
