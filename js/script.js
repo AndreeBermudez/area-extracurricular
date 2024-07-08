@@ -38,10 +38,10 @@ function manejarBusqueda() {
 function filtrarUsuarios() {
     const entradaBusqueda = document.querySelector('#busquedaUsuario');
     entradaBusqueda.addEventListener('input', function() {
+        console.log("Buscando: ", this.value);
         const valorBusqueda = this.value.toLowerCase();
         const filasUsuario = document.querySelectorAll('.filaUsuario');
         filasUsuario.forEach(function(fila) {
-            // Asumiendo que el nombre de usuario está en la primera celda
             const usuario = fila.cells[0].textContent.toLowerCase();
             if (usuario.includes(valorBusqueda)) {
                 fila.style.display = '';
@@ -53,8 +53,8 @@ function filtrarUsuarios() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+    filtrarUsuarios();
     manejarMenuDesplegable();
     manejarDespliegueFAQ();
     manejarBusqueda();
-    filtrarUsuarios();
 });

@@ -26,6 +26,8 @@
       <section id="formulario">
         <div class="form-container">
           <?php
+          require_once 'funcion_formulario_txt.php';
+
           $errorCodigo = $errorNombre = $errorApellido = $errorNumero = "";
           $codigo = $nombre = $apellido = $numero = $taller = "";
 
@@ -59,7 +61,17 @@
             }
 
             if ($valid) {
+
+              date_default_timezone_set('America/Lima'); // Ajustar la zona horaria
               $correo = $codigo . "@utp.edu.pe";
+
+              if (!isset($_SESSION['fechaEnvio'])) {
+                $_SESSION['fechaEnvio'] = date('d/m/Y H:i:s'); // Guardar la fecha y hora de envío en la sesión
+            }
+            $fechaEnvio = $_SESSION['fechaEnvio'];
+
+            registrarFormulario($codigo, $nombre, $apellido, $correo, $numero, $taller, $fechaEnvio);
+
 
               echo "<div class='resumen'>";
               echo "<p id='enviado-msg' class='enviado-msg' ><b>¡Formulario enviado correctamente!</b></p> ";
@@ -69,6 +81,7 @@
               echo "<p><strong>Número:</strong> " . $numero . "</p>";
               echo "<p><strong>Taller:</strong> " . ($taller === "taller1" ? "Cultural" : "Deportivo") . "</p>";
               echo "<p>Se enviará más información al correo.</p>";
+              echo "<p><strong>Enviado:</strong> " . $fechaEnvio . "</p>";
               echo "</div>";
             }
           }
