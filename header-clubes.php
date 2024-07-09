@@ -1,4 +1,3 @@
-        <?php session_start(); ?>
         <section class="navegacion">
             <div class="logo">
                 <img src="img-nav/logo.webp" alt="Logo">
@@ -18,7 +17,7 @@
                     <?php if (isset($_SESSION['esAdmin']) && $_SESSION['esAdmin']): ?>
                     <li><a href="interfaz-administrador.php">Administración</a></li>
                     <?php endif; ?> 
-                    <li><a href="interfaz-login.php">Salir</a></li>
+                    <li><a href="logout.php">Salir</a></li>
                 </ul>
         </section>
         <section class="container-titulo">

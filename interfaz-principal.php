@@ -1,3 +1,11 @@
+<?php
+    session_start();
+    if(!isset($_SESSION['usuario'])){
+        header('Location: interfaz-login.php');
+        exit();
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 

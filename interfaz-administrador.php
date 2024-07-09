@@ -1,9 +1,18 @@
 <?php
-// if(!isset($_SESSION['esAdmin']) || !$_SESSION['esAdmin']) {
-//     header('Location: interfaz-login.php');
-//     exit();
-// }
+session_start();
+// Si no existe un usuario
+if (!isset($_SESSION['usuario'])) {
+    header('Location: interfaz-login.php');
+    exit();
+} else {
+    // Si no hay un atributo esAdmin o es false
+    if (!isset($_SESSION['esAdmin']) || $_SESSION['esAdmin'] !== true) {
+        header('Location: interfaz-principal.php');
+        exit();
+    }
+}
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -41,12 +50,12 @@
                     <?php
                     $directorio = opendir('user/');
                     $usuarios = [];
-                    while (($archivo=readdir($directorio)) !== false){
-                        if($archivo != '.' && $archivo != '..' && $archivo != 'admin.txt'){
-                            $rutaArchivo='user/'.$archivo;
+                    while (($archivo = readdir($directorio)) !== false) {
+                        if ($archivo != '.' && $archivo != '..' && $archivo != 'admin.txt') {
+                            $rutaArchivo = 'user/' . $archivo;
                             $contenidoArchivo = file_get_contents($rutaArchivo);
-                            $usuario=json_decode($contenidoArchivo,true);
-                            $usuarios[]=$usuario;
+                            $usuario = json_decode($contenidoArchivo, true);
+                            $usuarios[] = $usuario;
                         }
                     }
                     closedir($directorio);
@@ -63,7 +72,7 @@
                 </tbody>
             </table>
         </div>
-        
+
     </section>
 
 
