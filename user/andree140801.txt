@@ -1,0 +1,1 @@
+{"nombre":"Harold Andree","apellido":"Bermudez Porras","usuario":"andree140801","email":"u22102663@utp.edu.pe","passwordHash":"$2y$10$6pn813Nd9ZvWj3xax8D5HOxgeIQkWjjxpzIosmpI295g4FxfnoPo."}

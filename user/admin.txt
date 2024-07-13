@@ -1,1 +1,0 @@
-{"nombre":"Admin","usuario":"admin","email":"u22102663@utp.edu.pe","passwordHash":"$2y$10$r3VbwDLJ0wQKYFxL770iduX8Z3mYZ\/WchcA4IHvagxy7As56SocqW","esAdmin": true}

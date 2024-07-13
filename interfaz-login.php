@@ -1,10 +1,7 @@
-<?php session_start();
+<?php 
+session_start();
 if (isset($_SESSION['usuario'])) {
-  if ($_SESSION['usuario'] == 'admin') {
-    header('Location: interfaz-principal.php');
-  } else {
-    header('Location: interfaz-principal.php');
-  }
+  header('Location: interfaz-principal.php');
   exit();
 }
 ?>

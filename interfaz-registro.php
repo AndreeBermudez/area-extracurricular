@@ -13,12 +13,13 @@ require_once 'funcion_registrar.php';
 $error = '';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $nombre = $_POST['nombre'];
+  $apellido = $_POST['apellido'];
   $usuario = $_POST['usuario'];
   $email = $_POST['email'];
   $password = $_POST['password'];
   $confirmar_password = $_POST['confirmar_password'];
 
-  $resultado = registrarUsuario($nombre, $usuario, $email, $password, $confirmar_password);
+  $resultado = registrarUsuario($nombre, $apellido, $usuario, $email, $password, $confirmar_password);
   if ($resultado === 'Registrado con éxito') {
     $_SESSION['mensaje'] = $resultado;
     header('Location: interfaz-login.php');
@@ -55,6 +56,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <form class="formulario" id="myRegister" method="POST" action="interfaz-registro.php">
           <div class="user-register">
             <input type="text" name="nombre" placeholder="Nombre" required />
+          </div>
+          <div class="user-register">
+            <input type="text" name="apellido" placeholder="Apellido" required />
           </div>
           <div class="user-register">
             <input type="text" name="usuario" placeholder="Usuario" required />

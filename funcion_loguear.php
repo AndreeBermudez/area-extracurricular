@@ -1,29 +1,34 @@
 <?php
-    ob_start();
-    session_start();
-    $usuario = $_POST['user'];
-    $password = $_POST['password'];
+require_once './modelo/usuario_crud.php';
+session_start();
 
-    $usuarioEncontrado = false;
-    $directorioUsuarios='user/';
-    $rutaArchivoUsuario= $directorioUsuarios . $usuario. '.txt';
+$usuario = $_POST['user'];
+$password = $_POST['password'];
 
-    if(file_exists($rutaArchivoUsuario)){
-        $datosUsuarioJson = file_get_contents($rutaArchivoUsuario);
-        $datosUsuario= json_decode($datosUsuarioJson,true);
-        if(password_verify($password,$datosUsuario['passwordHash'])){
-            $usuarioEncontrado = true;
-        }
-    }
+$sql = "SELECT * FROM usuarios WHERE username = ?";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("s", $usuario);
+$stmt->execute();
+$result = $stmt->get_result();
 
-    if($usuarioEncontrado) {
+if ($result->num_rows > 0) {
+    $datosUsuario = $result->fetch_assoc();
+    if (password_verify($password, $datosUsuario['password'])) {
         $_SESSION['usuario'] = $usuario;
-        $_SESSION['esAdmin']=$datosUsuario['esAdmin'] ?? false;
+        $_SESSION['rol'] = $datosUsuario['rol'];
+        $_SESSION['usuario_id'] = $datosUsuario['usuario_id'];
+        $_SESSION['nombre'] = $datosUsuario['nombre'];
+        $_SESSION['apellido'] = $datosUsuario['apellido'];
+        $_SESSION['email'] = $datosUsuario['email'];
         header('Location: interfaz-principal.php');
         exit();
     } else {
         $_SESSION['error'] = 'Usuario o contraseña incorrectos';
-        header('Location: interfaz-login.php');
-        exit();
     }
+} else {
+    $_SESSION['error'] = 'Usuario o contraseña incorrectos';
+}
+
+header('Location: interfaz-login.php');
+exit();
 ?>

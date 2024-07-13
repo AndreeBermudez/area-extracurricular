@@ -5,12 +5,15 @@ if (!isset($_SESSION['usuario'])) {
     header('Location: interfaz-login.php');
     exit();
 } else {
-    // Si no hay un atributo esAdmin o es false
-    if (!isset($_SESSION['esAdmin']) || $_SESSION['esAdmin'] !== true) {
+    // Si el rol no es 'admin'
+    if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'admin') {
         header('Location: interfaz-principal.php');
         exit();
     }
 }
+
+require_once './modelo/usuario_crud.php';
+$usuarios = listarUsuarios();
 ?>
 
 <!DOCTYPE html>
@@ -40,35 +43,26 @@ if (!isset($_SESSION['usuario'])) {
             <table class="tabla-usuarios">
                 <thead class="tabla-usuarios__cabecera">
                     <tr>
-                        <th>Nombre</th>
+                        <th>Nombres</th>
+                        <th>Apellidos</th>
                         <th>Usuario</th>
                         <th>Correo</th>
                         <th>Acciones</th>
                     </tr>
                 </thead>
                 <tbody class="tabla-usuarios__cuerpo">
-                    <?php
-                    $directorio = opendir('user/');
-                    $usuarios = [];
-                    while (($archivo = readdir($directorio)) !== false) {
-                        if ($archivo != '.' && $archivo != '..' && $archivo != 'admin.txt') {
-                            $rutaArchivo = 'user/' . $archivo;
-                            $contenidoArchivo = file_get_contents($rutaArchivo);
-                            $usuario = json_decode($contenidoArchivo, true);
-                            $usuarios[] = $usuario;
-                        }
-                    }
-                    closedir($directorio);
-
-                    foreach ($usuarios as $usuario) {
-                        echo '<tr class="filaUsuario">';
-                        echo '<td>' . $usuario['nombre'] . '</td>';
-                        echo '<td>' . $usuario['usuario'] . '</td>';
-                        echo '<td>' . $usuario['email'] . '</td>';
-                        echo '<td><button>Editar</button><button>Eliminar</button></td>';
-                        echo '</tr>';
-                    }
-                    ?>
+                    <?php foreach ($usuarios as $usuario) : ?>
+                        <tr class="filaUsuario">
+                            <td><?php echo htmlspecialchars($usuario['nombre']); ?></td>
+                            <td><?php echo htmlspecialchars($usuario['apellido']); ?></td>
+                            <td><?php echo htmlspecialchars($usuario['username']); ?></td>
+                            <td><?php echo htmlspecialchars($usuario['email']); ?></td>
+                            <td>
+                                <button>Editar</button>
+                                <button>Eliminar</button>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
                 </tbody>
             </table>
         </div>

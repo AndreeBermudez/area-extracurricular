@@ -14,7 +14,7 @@
           <li><a href="interfaz-principal.php">Inicio</a></li>
           <li><a href="interfaz-clubes.php">Clubes</a></li>
           <li><a href="interfaz-formulario.php" class="active">Formulario</a></li>
-          <?php if (isset($_SESSION['esAdmin']) && $_SESSION['esAdmin']) : ?>
+          <?php if (isset($_SESSION['rol']) && $_SESSION['rol'] == 'admin') : ?>
             <li><a href="interfaz-administrador.php">Administración</a></li>
           <?php endif; ?>
           <li><a href="logout.php">Salir</a></li>
