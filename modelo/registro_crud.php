@@ -4,14 +4,18 @@ require_once "conexion.php";
 function crearRegistro($usuario_id, $codigo, $telefono, $tipo_registro, $fecha_registro)
 {
     global $conn;
-    $sql = "INSERT INTO registros (usuario_id, codigo, telefono, tipo_registro, fecha_registro) VALUES (?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO registro (usuario_id, codigo, telefono, tipo_registro, fecha_registro) VALUES (?, ?, ?, ?, ?)";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("issss", $usuario_id, $codigo, $telefono, $tipo_registro, $fecha_registro);
 
     if ($stmt->execute()) {
         return 'Registro creado con éxito';
     } else {
-        return 'Error al crear el registro: ' . $stmt->error;
+        if ($stmt->errno == 1062) {  // error para duplicación en MySQL
+            return 'Error: El usuario ya está registrado en este taller';
+        } else {
+            return 'Error al crear el registro: ' . $stmt->error;
+        }
     }
 }
 

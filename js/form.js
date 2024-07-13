@@ -22,7 +22,7 @@ function validarPaso2() {
     let apellido = document.getElementById('apellido').value;
     let numero = document.getElementById('numero').value;
 
-    let nombreApellidoRegex = /^[a-zA-Z]+$/;
+    let nombreApellidoRegex = /^[a-zA-Z ]+$/;
     let numeroRegex = /^\d{9}$/;
     let isValid = true;
 
