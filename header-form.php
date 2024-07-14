@@ -115,8 +115,8 @@
             <div class="input-container">
               <label for="taller">Seleccione un taller:</label>
               <select id="taller" name="talleres" required>
-                <option value="taller1" <?php if ($taller == "taller cultural") echo "selected"; ?>>Taller Cultural</option>
-                <option value="taller2" <?php if ($taller == "taller deportivo") echo "selected"; ?>>Taller Deportivo</option>
+                <option value="taller cultural" <?php if ($taller == "taller cultural") echo "selected"; ?>>Taller Cultural</option>
+                <option value="taller deportivo" <?php if ($taller == "taller deportivo") echo "selected"; ?>>Taller Deportivo</option>
               </select>
             </div>
             <div class="button-container">

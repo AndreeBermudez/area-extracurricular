@@ -35,26 +35,4 @@ function eliminarUsuario($usuario_id){
     return $stmt->execute();
 }
 
-// function filtrarUsuarios($palabra){
-//     global $conn;
-
-//     $palabra = "%" . $palabra . "%";
-
-//     $sql = "SELECT * FROM usuarios WHERE rol='usuario' AND nombre LIKE ?";
-//     $stmt = $conn->prepare($sql);
-//     $stmt->bind_param("s", $palabra);
-//     $stmt->execute();
-//     $result = $stmt->get_result();
-
-//     $usuarios = [];
-
-//     if ($result->num_rows > 0) {
-//         while ($row = $result->fetch_assoc()) {
-//             $usuarios[] = $row;
-//         }
-//         return $usuarios;
-//     } else {
-//         return $usuarios;
-//     }
-// }
 ?>
