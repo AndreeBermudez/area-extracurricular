@@ -23,7 +23,7 @@ function crearRegistro($usuario_id, $codigo, $telefono, $tipo_registro, $fecha_r
 function listarRegistros()
 {
     global $conn;
-    $sql = "SELECT u.nombre, u.apellido, u.username, r.codigo, r.telefono, r.tipo_registro, r.fecha_registro 
+    $sql = "SELECT r.registro_id,u.nombre, u.apellido, u.username, r.codigo, r.telefono, r.tipo_registro, r.fecha_registro 
             FROM registro r
             INNER JOIN usuarios u
             ON r.usuario_id = u.usuario_id"; 
@@ -44,36 +44,6 @@ function consumirRegistro($registro_id){
     $sql= "DELETE FROM registro WHERE registro_id = ?";
     $stmt=$conn->prepare($sql);
     $stmt->bind_param("i",$registro_id);
-    if($stmt->execute()){
-        return "Registro consumido con exito";
-    }else{
-        return "No se encontro el registro a consumir". $stmt->error;
-    }
+    return $stmt->execute();
 }
 
-function filtrarRegistro($palabra){
-    global $conn;
-
-    $palabra = "%" . $palabra . "%";
-
-    $sql = "SELECT u.nombre, u.apellido, u.username, r.codigo, r.telefono, r.tipo_registro, r.fecha_registro 
-            FROM registro r
-            INNER JOIN usuarios u
-            ON r.usuario_id = u.usuario_id
-            WHERE u.nombre LIKE ?"; 
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("s", $palabra);
-    $stmt->execute();
-    $result = $stmt->get_result();
-
-    $usuarios = [];
-
-    if ($result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
-            $usuarios[] = $row;
-        }
-        return $usuarios;
-    } else {
-        return $usuarios;
-    }
-}

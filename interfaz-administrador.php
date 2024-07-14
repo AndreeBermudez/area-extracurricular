@@ -60,15 +60,16 @@ $registros = listarRegistros();
                             <td><?php echo htmlspecialchars($usuario['username']); ?></td>
                             <td><?php echo htmlspecialchars($usuario['email']); ?></td>
                             <td>
-                                <button>Editar</button>
-                                <button>Eliminar</button>
+                                <form method="POST" action="funcion_eliminar_usuario.php">
+                                    <input type="hidden" name="usuario_id" value="<?php echo $usuario['usuario_id']; ?>">
+                                    <button type="submit" name="eliminar_usuario">Eliminar</button>
+                                </form>
                             </td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
             </table>
         </div>
-
     </section>
 
     <section class="container-usuarios">
@@ -101,17 +102,17 @@ $registros = listarRegistros();
                             <td><?php echo htmlspecialchars($registro['tipo_registro']); ?></td>
                             <td><?php echo htmlspecialchars($registro['fecha_registro']); ?></td>
                             <td>
-                                <button>Editar</button>
-                                <button>Eliminar</button>
+                                <form method="POST" action="funcion_eliminar_registro.php">
+                                    <input type="hidden" name="registro_id" value="<?php echo $registro['registro_id']; ?>">
+                                    <button type="submit" name="eliminar_registro">Eliminar</button>
+                                </form>
                             </td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
             </table>
         </div>
-
     </section>
-
 
     <footer class="footer-utp">
         <?php include 'footer.php'; ?>

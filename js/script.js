@@ -1,5 +1,6 @@
 // Menú desplegable
 function manejarMenuDesplegable() {
+    console.log('manejarMenuDesplegable se está ejecutando');
     const hamburguesa = document.querySelector('.hamburger');
     hamburguesa.onclick = function() {
         const barraNavegacion = document.querySelector('.nav-bar');
@@ -53,8 +54,16 @@ function filtrarUsuarios() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    filtrarUsuarios();
-    manejarMenuDesplegable();
-    manejarDespliegueFAQ();
-    manejarBusqueda();
+    if (document.querySelector('#busquedaUsuario')) {
+        filtrarUsuarios();
+    }
+    if (document.querySelector('.hamburger')) {
+        manejarMenuDesplegable();
+    }
+    if (document.querySelectorAll('.FAQ-title').length > 0) {
+        manejarDespliegueFAQ();
+    }
+    if (document.querySelector('.search input')) {
+        manejarBusqueda();
+    }
 });
