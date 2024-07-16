@@ -17,7 +17,7 @@
             <?php if (isset($_SESSION['rol']) && $_SESSION['rol'] == 'admin') : ?>
                 <li><a href="interfaz-administrador.php" class="active">Administración</a></li>
             <?php endif; ?>
-            <li><a href="./logica/funcion_logout.php">Salir</a></li>
+            <li><a href="./logica/funcion_logout.php" onclick="return confirm('Estas seguro que deseas salir?');">Salir</a></li>
         </ul>
     </nav>
 </section>

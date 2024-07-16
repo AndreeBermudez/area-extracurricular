@@ -58,7 +58,7 @@ $registros = listarRegistros();
                             <td><?php echo htmlspecialchars($usuario['username']); ?></td>
                             <td><?php echo htmlspecialchars($usuario['email']); ?></td>
                             <td>
-                                <form method="POST" action="./logica/funcion_eliminar_usuario.php">
+                                <form method="POST" action="./logica/funcion_eliminar_usuario.php" onsubmit="return confirm('¿Está seguro de que desea eliminar este usuario?');">
                                     <input type="hidden" name="usuario_id" value="<?php echo $usuario['usuario_id']; ?>">
                                     <button type="submit" name="eliminar_usuario">Eliminar</button>
                                 </form>
@@ -100,9 +100,9 @@ $registros = listarRegistros();
                             <td><?php echo htmlspecialchars($registro['tipo_registro']); ?></td>
                             <td><?php echo htmlspecialchars($registro['fecha_registro']); ?></td>
                             <td>
-                                <form method="POST" action="./logica/funcion_eliminar_registro.php">
+                                <form method="POST" action="./logica/funcion_eliminar_registro.php" onsubmit="return confirm('¿Está seguro de que desea procesar este registro?');">
                                     <input type="hidden" name="registro_id" value="<?php echo $registro['registro_id']; ?>">
-                                    <button type="submit" name="eliminar_registro">Eliminar</button>
+                                    <button type="submit" name="eliminar_registro">Procesar</button>
                                 </form>
                             </td>
                         </tr>
