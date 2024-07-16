@@ -1,11 +1,9 @@
 <?php
 session_start();
-// Si no existe un usuario
 if (!isset($_SESSION['usuario'])) {
     header('Location: interfaz-login.php');
     exit();
 } else {
-    // Si el rol no es 'admin'
     if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'admin') {
         header('Location: interfaz-principal.php');
         exit();
