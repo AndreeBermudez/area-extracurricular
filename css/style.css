@@ -936,11 +936,10 @@ header {
   color: white;
 }
 
-.tabla-usuarios__cuerpo{
-  
+.tabla-usuarios-container {
+  width: 100%;
+  overflow-x: auto;
 }
-
-
 /************************ MEDIA QUERIES *********************************/
 
 @media screen and (max-width: 1320px) {

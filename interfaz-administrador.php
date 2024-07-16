@@ -41,7 +41,7 @@ $registros = listarRegistros();
         <div class="container-usuarios__filtro">
             <input type="text" id="busquedaUsuario" placeholder="Buscar usuario">
         </div>
-        <div class="container-usuarios__tabla">
+        <div class="tabla-usuarios-container">
             <table class="tabla-usuarios">
                 <thead class="tabla-usuarios__cabecera">
                     <tr>
@@ -77,7 +77,7 @@ $registros = listarRegistros();
             <h2>Formularios Registrados</h2>
         </div>
 
-        <div class="container-usuarios__tabla">
+        <div class="tabla-usuarios-container">
             <table class="tabla-usuarios">
                 <thead class="tabla-usuarios__cabecera">
                     <tr>
