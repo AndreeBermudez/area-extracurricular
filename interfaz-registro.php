@@ -8,7 +8,7 @@ if (isset($_SESSION['usuario'])) {
   }
   exit();
 }
-require_once 'funcion_registrar.php';
+require_once './logica/funcion_registrar.php';
 
 $error = '';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <div class="register-container-form">
       <div class="form-logo">
-        <img src="./img-nav/logo.webp" alt="logo">
+        <img src="./recursos/img-nav/logo.webp" alt="logo">
       </div>
       <div class="form-titulo">
         <p>Ingresa tus datos para registrarte.</p>

@@ -1,5 +1,5 @@
 <?php
-require_once "./modelo/usuario_crud.php";
+require_once './modelo/usuario_crud.php';
 function registrarUsuario($nombre, $apellido, $usuario, $email, $password, $confirmar_password)
 {
     $error = '';

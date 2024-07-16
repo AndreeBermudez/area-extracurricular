@@ -24,7 +24,7 @@
 
     <section class="conocenos">
         <figure class="conocenos__imagen">
-          <img src="img-presentacion/imagen_conocenos.webp" alt="imagen" />
+          <img src="./recursos/img-presentacion/imagen_conocenos.webp" alt="imagen" />
         </figure>
         <div class="conocenos__contenedor">
           <article class="conocenos__texto">
@@ -40,7 +40,7 @@
               </p>
             </div>
             <div class="conocenos__responsive">
-              <img src="img-presentacion/imagen_conocenos.webp" alt="imagen">
+              <img src="./recursos/img-presentacion/imagen_conocenos.webp" alt="imagen">
             </div>
           </article>
           <article class="conocenos_myv">
@@ -56,7 +56,7 @@
                 </p>
               </div>
               <figure class="svg-myv">
-                <img src="img-presentacion/mision.svg" alt="Misionlogo">
+                <img src="./recursos/img-presentacion/mision.svg" alt="Misionlogo">
               </figure>
             </div>
             <div class="vision">
@@ -71,7 +71,7 @@
                 </p>
               </div>
               <figure class="svg-myv">
-                <img src="img-presentacion/vision.svg" alt="Visionlogo">
+                <img src="./recursos/img-presentacion/vision.svg" alt="Visionlogo">
               </figure>
             </div>
           </article>
@@ -92,7 +92,7 @@
         <div class="FAQ-acordeon">
             <div class="FAQ-name">
                 <h1>¿Tienes alguna duda?</h1>
-                <img src="./img-nav/faq.webp" alt="FAQ">
+                <img src="./recursos/img-nav/faq.webp" alt="FAQ">
             </div>
             <div class="FAQ-box">
                 <div class="FAQ-wrapper">
@@ -173,7 +173,7 @@
         <div class="noticias-container">
           <div class="noticias-box">
             <div class="noticias-img">
-              <img src="img-noticias/noticia-1.webp" alt="autos" />
+              <img src="./recursos/img-noticias/noticia-1.webp" alt="autos" />
             </div>
             <div class="noticias-texto">
               <span>Jueves 15 de Diciembre 2022</span>
@@ -185,7 +185,7 @@
   
           <div class="noticias-box">
             <div class="noticias-img">
-              <img src="img-noticias/noticia-2.webp" alt="autos" />
+              <img src="./recursos/img-noticias/noticia-2.webp" alt="autos" />
             </div>
             <div class="noticias-texto">
               <span>Martes 07 de Junio 2022</span>
@@ -197,7 +197,7 @@
   
           <div class="noticias-box">
             <div class="noticias-img">
-              <img src="img-noticias/noticia-3.webp" alt="autos" />
+              <img src="./recursos/img-noticias/noticia-3.webp" alt="autos" />
             </div>
             <div class="noticias-texto">
               <span>Lunes 29 de Agosto 2022</span>

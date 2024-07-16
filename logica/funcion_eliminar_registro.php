@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once './modelo/registro_crud.php';
+require_once '../modelo/registro_crud.php';
 
 if (isset($_POST['eliminar_registro'])) {
     $registro_id = $_POST['registro_id'];
@@ -13,6 +13,6 @@ if (isset($_POST['eliminar_registro'])) {
     }
 }
 
-header('Location: interfaz-administrador.php');
+header('Location: ../interfaz-administrador.php');
 exit();
 ?>

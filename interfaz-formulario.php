@@ -29,32 +29,32 @@
     </div>
     <div class="row">
       <div class="column">
-        <img src="./galeria/imagen1.jpg" alt="imagen 1" />
-        <img src="./galeria/imagen2.jpg" alt="imagen 1" />
-        <img src="./galeria/imagen3.jpg" alt="imagen 1" />
-        <img src="./galeria/imagen4.jpg" alt="imagen 1" />
-        <img src="./galeria/imagen5.jpg" alt="imagen 1" />
+        <img src="./recursos/galeria/imagen1.jpg" alt="imagen 1" />
+        <img src="./recursos/galeria/imagen2.jpg" alt="imagen 2" />
+        <img src="./recursos/galeria/imagen3.jpg" alt="imagen 3" />
+        <img src="./recursos/galeria/imagen4.jpg" alt="imagen 4" />
+        <img src="./recursos/galeria/imagen5.jpg" alt="imagen 5" />
       </div>
       <div class="column">
-        <img src="./galeria/imagen6.jpg" alt="imagen 1" />
-        <img src="./galeria/imagen7.jpg" alt="imagen 1" />
-        <img src="./galeria/imagen8.jpg" alt="imagen 1" />
-        <img src="./galeria/imagen9.jpg" alt="imagen 1" />
-        <img src="./galeria/imagen10.jpg" alt="imagen 1" />
+        <img src="./recursos/galeria/imagen6.jpg" alt="imagen 6" />
+        <img src="./recursos/galeria/imagen7.jpg" alt="imagen 7" />
+        <img src="./recursos/galeria/imagen8.jpg" alt="imagen 8" />
+        <img src="./recursos/galeria/imagen9.jpg" alt="imagen 9" />
+        <img src="./recursos/galeria/imagen10.jpg" alt="imagen 10" />
       </div>
       <div class="column">
-        <img src="./galeria/imagen11.jpg" alt="imagen 1" />
-        <img src="./galeria/imagen12.jpg" alt="imagen 1" />
-        <img src="./galeria/imagen13.jpg" alt="imagen 1" />
-        <img src="./galeria/imagen14.jpg" alt="imagen 1" />
-        <img src="./galeria/imagen15.jpg" alt="imagen 1" />
+        <img src="./recursos/galeria/imagen11.jpg" alt="imagen 11" />
+        <img src="./recursos/galeria/imagen12.jpg" alt="imagen 12" />
+        <img src="./recursos/galeria/imagen13.jpg" alt="imagen 13" />
+        <img src="./recursos/galeria/imagen14.jpg" alt="imagen 14" />
+        <img src="./recursos/galeria/imagen15.jpg" alt="imagen 15" />
       </div>
       <div class="column">
-        <img src="./galeria/imagen16.png" alt="imagen 1" />
-        <img src="./galeria/imagen17.jpg" alt="imagen 1" />
-        <img src="./galeria/imagen18.jpg" alt="imagen 1" />
-        <img src="./galeria/imagen19.jpg" alt="imagen 1" />
-        <img src="./galeria/imagen20.jpg" alt="imagen 1" />
+        <img src="./recursos/galeria/imagen16.png" alt="imagen 16" />
+        <img src="./recursos/galeria/imagen17.jpg" alt="imagen 17" />
+        <img src="./recursos/galeria/imagen18.jpg" alt="imagen 18" />
+        <img src="./recursos/galeria/imagen19.jpg" alt="imagen 19" />
+        <img src="./recursos/galeria/imagen20.jpg" alt="imagen 20" />
       </div>
     </div>
   </section>

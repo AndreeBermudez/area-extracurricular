@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once './modelo/usuario_crud.php';
+require_once '../modelo/usuario_crud.php';
 
 if (isset($_POST['eliminar_usuario'])) {
     $usuario_id = $_POST['usuario_id'];
@@ -13,6 +13,6 @@ if (isset($_POST['eliminar_usuario'])) {
     }
 }
 
-header('Location: interfaz-administrador.php');
+header('Location: ../interfaz-administrador.php');
 exit();
 ?>

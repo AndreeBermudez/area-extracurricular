@@ -1,6 +1,6 @@
 <section class="navegacion">
     <div class="logo">
-        <img src="img-nav/logo.webp" alt="Logo">
+        <img src="./recursos/img-nav/logo.webp" alt="Logo">
     </div>
 
     <div class="hamburger">
@@ -17,7 +17,7 @@
             <?php if (isset($_SESSION['rol']) && $_SESSION['rol'] == 'admin') : ?>
                 <li><a href="interfaz-administrador.php">Administración</a></li>
             <?php endif; ?>
-            <li><a href="logout.php">Salir</a></li>
+            <li><a href="./logica/funcion_logout.php">Salir</a></li>
         </ul>
     </nav>
 </section>

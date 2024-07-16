@@ -1,5 +1,5 @@
 <?php
-require_once "conexion.php";
+require_once 'conexion.php';
 
 function crearRegistro($usuario_id, $codigo, $telefono, $tipo_registro, $fecha_registro)
 {

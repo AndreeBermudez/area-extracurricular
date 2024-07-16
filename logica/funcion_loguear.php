@@ -1,5 +1,5 @@
 <?php
-require_once './modelo/usuario_crud.php';
+require_once '../modelo/usuario_crud.php';
 session_start();
 
 $usuario = $_POST['user'];
@@ -20,7 +20,7 @@ if ($result->num_rows > 0) {
         $_SESSION['nombre'] = $datosUsuario['nombre'];
         $_SESSION['apellido'] = $datosUsuario['apellido'];
         $_SESSION['email'] = $datosUsuario['email'];
-        header('Location: interfaz-principal.php');
+        header('Location: ../interfaz-principal.php');
         exit();
     } else {
         $_SESSION['error'] = 'Usuario o contraseña incorrectos';
@@ -29,6 +29,6 @@ if ($result->num_rows > 0) {
     $_SESSION['error'] = 'Usuario o contraseña incorrectos';
 }
 
-header('Location: interfaz-login.php');
+header('Location: ../interfaz-login.php');
 exit();
 ?>

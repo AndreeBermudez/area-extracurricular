@@ -20,7 +20,7 @@
 .register-imagen {
     width: 50%;
     height: 100vh;
-    background-image: url(../img-login/image-login.png);
+    background-image: url(../recursos/img-login/image-login.png);
     background-size: cover;
     background-position: center;
     box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.2);
@@ -143,7 +143,7 @@
     .register-background {
         height: 100%;
         background-color: #ACADA7;
-        background-image: url(../img-login/login-responsive.jpg);
+        background-image: url(../recursos/img-login/login-responsive.jpg);
         background-size: cover;
         background-position: center;
         box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.427);

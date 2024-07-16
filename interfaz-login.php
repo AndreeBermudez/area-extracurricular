@@ -22,13 +22,13 @@ if (isset($_SESSION['usuario'])) {
 
     <div class="login-container-form">
       <div class="form-logo">
-        <img src="./img-nav/logo.webp" alt="logo" />
+        <img src="./recursos/img-nav/logo.webp" alt="logo" />
       </div>
       <div class="form-titulo">
         <p>Ingresa tus datos para iniciar sesión.</p>
       </div>
       <div class="form-login">
-        <form class="formulario" id="myForm" method="POST" action="funcion_loguear.php">
+        <form class="formulario" id="myForm" method="POST" action="./logica/funcion_loguear.php">
           <div class="user-login">
             <input type="text" name="user" id="usuario" placeholder="Usuario del alumno" required />
           </div>

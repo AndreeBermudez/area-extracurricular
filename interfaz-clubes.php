@@ -32,7 +32,7 @@
       foreach ($clubes as $club) : ?>
         <div class="clubes-box">
           <div class="clubes-img">
-            <img src="img-clubes/<?php echo $club['imagen']; ?>" alt="<?php echo $club['alt']; ?>" />
+            <img src="./recursos/img-clubes/<?php echo $club['imagen']; ?>" alt="<?php echo $club['alt']; ?>" />
           </div>
           <div class="clubes-texto">
             <span><?php echo $club['horario']; ?></span>
